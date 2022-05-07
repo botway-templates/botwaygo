@@ -1,7 +1,9 @@
 package botwaygo
 
 import (
+	"bytes"
 	"errors"
+	"io/ioutil"
 
 	"github.com/abdfnx/botway/constants"
 	"github.com/spf13/viper"
@@ -9,18 +11,20 @@ import (
 )
 
 func GetBotInfo(value string) string {
-	viper.AddConfigPath(".")
-	viper.SetConfigName(".botway")
 	viper.SetConfigType("yaml")
+
+	BotConfig, err := ioutil.ReadFile(".botway.yaml")
+
+	if err != nil {
+		panic(err)
+	}
+
+	viper.ReadConfig(bytes.NewBuffer(BotConfig))
 
 	return viper.GetString("bot." + value)
 }
 
 func GetToken() string {
-	if constants.Berr != nil {
-		panic(constants.Berr)
-	}
-
 	if GetBotInfo("lang") != "go" {
 		panic(errors.New("ERROR: Botway is not running in Golang"))
 	} else {
@@ -31,10 +35,6 @@ func GetToken() string {
 }
 
 func GetAppId() string {
-	if constants.Berr != nil {
-		panic(constants.Berr)
-	}
-
 	if GetBotInfo("lang") != "go" {
 		panic(errors.New("ERROR: Botway is not running in Golang"))
 	} else {
@@ -51,14 +51,10 @@ func GetAppId() string {
 }
 
 func GetGuildId(serverName string) string {
-	if constants.Berr != nil {
-		panic(constants.Berr)
-	}
-
 	if GetBotInfo("lang") != "go" {
 		panic(errors.New("ERROR: Botway is not running in Golang"))
 	} else if GetBotInfo("type") != "discord" {
-		panic(errors.New("ERROR: This function/feature is only working with discord bots."))
+		panic(errors.New("ERROR: This function/feature is only working with discord bots"))
 	} else {
 		data := gjson.Get(string(constants.BotwayConfig), "botway.bots." + GetBotInfo("name") + ".guilds." + serverName + ".server_id").String()
 
