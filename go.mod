@@ -3,7 +3,7 @@ module github.com/abdfnx/botwaygo
 go 1.18
 
 require (
-	github.com/abdfnx/botway v0.1.5
+	github.com/abdfnx/botway v0.1.6
 	github.com/spf13/viper v1.12.0
 	github.com/tidwall/gjson v1.14.1
 )
