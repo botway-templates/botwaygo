@@ -3,13 +3,13 @@ module github.com/abdfnx/botwaygo
 go 1.18
 
 require (
-	github.com/abdfnx/botway v0.1.7
+	github.com/abdfnx/botway v0.1.81
 	github.com/spf13/viper v1.12.0
 	github.com/tidwall/gjson v1.14.2
 )
 
 require (
-	github.com/abdfnx/tran v0.1.31 // indirect
+	github.com/abdfnx/tran v0.1.43 // indirect
 	github.com/charmbracelet/lipgloss v0.5.0 // indirect
 	github.com/fsnotify/fsnotify v1.5.4 // indirect
 	github.com/hashicorp/hcl v1.0.0 // indirect
