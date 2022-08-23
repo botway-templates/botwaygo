@@ -44,6 +44,16 @@ func GetAppId() string {
 	}
 }
 
+func GetSigningSecret() string {
+	if GetBotInfo("lang") != "go" {
+		panic(errors.New("ERROR: Your Bot language is not Go"))
+	} else {
+		data := gjson.Get(string(constants.BotwayConfig), "botway.bots." + GetBotInfo("name") + ".signing_secret").String()
+
+		return data
+	}
+}
+
 func GetGuildId(serverName string) string {
 	if GetBotInfo("lang") != "go" {
 		panic(errors.New("ERROR: Your Bot language is not Go"))
