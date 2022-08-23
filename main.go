@@ -3,7 +3,6 @@ package botwaygo
 import (
 	"bytes"
 	"errors"
-	"io/ioutil"
 
 	"github.com/abdfnx/botway/constants"
 	"github.com/spf13/viper"
@@ -13,13 +12,7 @@ import (
 func GetBotInfo(value string) string {
 	viper.SetConfigType("yaml")
 
-	BotConfig, err := ioutil.ReadFile(".botway.yaml")
-
-	if err != nil {
-		panic(err)
-	}
-
-	viper.ReadConfig(bytes.NewBuffer(BotConfig))
+	viper.ReadConfig(bytes.NewBuffer(constants.BotConfig))
 
 	return viper.GetString(value)
 }
