@@ -21,52 +21,52 @@ func GetBotInfo(value string) string {
 
 	viper.ReadConfig(bytes.NewBuffer(BotConfig))
 
-	return viper.GetString("bot." + value)
+	return viper.GetString(value)
 }
 
 func GetToken() string {
-	if GetBotInfo("lang") != "go" {
+	if GetBotInfo("bot.lang") != "go" {
 		panic(errors.New("ERROR: Your Bot language is not Go"))
 	} else {
-		data := gjson.Get(string(constants.BotwayConfig), "botway.bots."+GetBotInfo("name")+".bot_token").String()
+		data := gjson.Get(string(constants.BotwayConfig), "botway.bots."+GetBotInfo("bot.name")+".bot_token").String()
 
 		return data
 	}
 }
 
 func GetAppId() string {
-	if GetBotInfo("lang") != "go" {
+	if GetBotInfo("bot.lang") != "go" {
 		panic(errors.New("ERROR: Your Bot language is not Go"))
 	} else {
 		id := "bot_app_id"
 
-		if GetBotInfo("type") == "slack" {
+		if GetBotInfo("bot.type") == "slack" {
 			id = "bot_app_token"
 		}
 
-		data := gjson.Get(string(constants.BotwayConfig), "botway.bots."+GetBotInfo("name")+"."+id).String()
+		data := gjson.Get(string(constants.BotwayConfig), "botway.bots."+GetBotInfo("bot.name")+"."+id).String()
 
 		return data
 	}
 }
 
 func GetSigningSecret() string {
-	if GetBotInfo("lang") != "go" {
+	if GetBotInfo("bot.lang") != "go" {
 		panic(errors.New("ERROR: Your Bot language is not Go"))
 	} else {
-		data := gjson.Get(string(constants.BotwayConfig), "botway.bots."+GetBotInfo("name")+".signing_secret").String()
+		data := gjson.Get(string(constants.BotwayConfig), "botway.bots."+GetBotInfo("bot.name")+".signing_secret").String()
 
 		return data
 	}
 }
 
 func GetGuildId(serverName string) string {
-	if GetBotInfo("lang") != "go" {
+	if GetBotInfo("bot.lang") != "go" {
 		panic(errors.New("ERROR: Your Bot language is not Go"))
-	} else if GetBotInfo("type") != "discord" {
+	} else if GetBotInfo("bot.type") != "discord" {
 		panic(errors.New("ERROR: This function/feature is only working with discord bots"))
 	} else {
-		data := gjson.Get(string(constants.BotwayConfig), "botway.bots."+GetBotInfo("name")+".guilds."+serverName+".server_id").String()
+		data := gjson.Get(string(constants.BotwayConfig), "botway.bots."+GetBotInfo("bot.name")+".guilds."+serverName+".server_id").String()
 
 		return data
 	}
