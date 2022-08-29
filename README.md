@@ -9,40 +9,10 @@
 go get github.com/abdfnx/botwaygo
 ```
 
-## Usage
+## Functions
 
-> this is an example of botway slack go template
-
-```go
-package main
-
-import (
-	"context"
-	"log"
-
-	"github.com/abdfnx/botwaygo"
-	"github.com/shomali11/slacker"
-)
-
-func main() {
-	bot := slacker.NewClient(botwaygo.GetToken(), botwaygo.GetAppToken())
-
-	definition := &slacker.CommandDefinition{
-		Handler: func(botCtx slacker.BotContext, request slacker.Request, response slacker.ResponseWriter) {
-			response.Reply("pong")
-		},
-	}
-
-	bot.Command("ping", definition)
-
-	ctx, cancel := context.WithCancel(context.Background())
-
-	defer cancel()
-
-	err := bot.Listen(ctx)
-
-	if err != nil {
-		log.Fatal(err)
-	}
-}
-```
+- `GetBotInfo`: get information about your bot, like bot language, or name, or host service
+- `GetToken`: get bot token
+- `GetAppId`: get bot app id (or app token)
+- `GetSigningSecret`: get the signing secret (only for slack bots)
+- `GetGuildId`: get the server id of a server (only for discord bots)
