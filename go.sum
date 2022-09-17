@@ -40,6 +40,8 @@ github.com/BurntSushi/toml v0.3.1/go.mod h1:xHWCNGjB5oqiDr8zfno3MHue2Ht5sIBksp03
 github.com/BurntSushi/xgb v0.0.0-20160522181843-27f122750802/go.mod h1:IVnqGOEym/WlBOVXweHU+Q+/VP0lqqI8lqeDx9IjBqo=
 github.com/abdfnx/botway v0.1.92 h1:8WkixKGM5dNYlK3kEtIkoweEyqRqEiPCUybfouJtxWw=
 github.com/abdfnx/botway v0.1.92/go.mod h1:mV87ckKPeuRWyPOeXwspga6lRZ8OGvbVdcN7TwWultE=
+github.com/abdfnx/botway v0.1.93 h1:01ZUUc4N/eHE8EUJSelR5s9BT836mEc4WUlA3PQ2N1U=
+github.com/abdfnx/botway v0.1.93/go.mod h1:W1Nb1GPgReayAY5CPy+Ssq5dIZJqVQ2JgjBVw2JVhlY=
 github.com/abdfnx/tran v0.1.43 h1:+Pt+eueAfqbskCuPMILmzKL3bRxWdVRfGfoS8XNp5gM=
 github.com/abdfnx/tran v0.1.43/go.mod h1:MtLBLPXDmxFyZaNdF0+Q9K2yd0nd+zXTSlrxE7IBP8w=
 github.com/census-instrumentation/opencensus-proto v0.2.1/go.mod h1:f6KPmirojxKA12rnyqOA5BBL4O983OfeGPqjHWSTneU=
