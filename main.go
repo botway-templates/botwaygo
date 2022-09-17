@@ -10,11 +10,13 @@ import (
 )
 
 func GetBotInfo(value string) string {
-	viper.SetConfigType("yaml")
+	botConfig := viper.New()
 
-	viper.ReadConfig(bytes.NewBuffer(constants.BotConfig))
+	botConfig.SetConfigType("yaml")
 
-	return viper.GetString(value)
+	botConfig.ReadConfig(bytes.NewBuffer(constants.BotConfig))
+
+	return botConfig.GetString(value)
 }
 
 func GetToken() string {
