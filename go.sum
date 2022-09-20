@@ -38,8 +38,8 @@ cloud.google.com/go/storage v1.14.0/go.mod h1:GrKmX003DSIwi9o29oFT7YDnHYwZoctc3f
 dmitri.shuralyov.com/gpu/mtl v0.0.0-20190408044501-666a987793e9/go.mod h1:H6x//7gZCb22OMCxBHrMx7a5I7Hp++hsVxbQ4BYO7hU=
 github.com/BurntSushi/toml v0.3.1/go.mod h1:xHWCNGjB5oqiDr8zfno3MHue2Ht5sIBksp03qcyfWMU=
 github.com/BurntSushi/xgb v0.0.0-20160522181843-27f122750802/go.mod h1:IVnqGOEym/WlBOVXweHU+Q+/VP0lqqI8lqeDx9IjBqo=
-github.com/abdfnx/botway v0.1.96 h1:mdrayCV2a7WG0cUNY5d/bGzErJZFa+g4u1KEZ/kOlsM=
-github.com/abdfnx/botway v0.1.96/go.mod h1:9XAZrY/qbfxz3KhK/fdjT6UxOSLPRfYiQL9QMTLPFnA=
+github.com/abdfnx/botway v0.1.97 h1:ooB2HyLSLxbLaQVQ7iTlWZMtRDTbCODRtwDZm3Y1AfE=
+github.com/abdfnx/botway v0.1.97/go.mod h1:9XAZrY/qbfxz3KhK/fdjT6UxOSLPRfYiQL9QMTLPFnA=
 github.com/abdfnx/tran v0.1.43 h1:+Pt+eueAfqbskCuPMILmzKL3bRxWdVRfGfoS8XNp5gM=
 github.com/abdfnx/tran v0.1.43/go.mod h1:MtLBLPXDmxFyZaNdF0+Q9K2yd0nd+zXTSlrxE7IBP8w=
 github.com/census-instrumentation/opencensus-proto v0.2.1/go.mod h1:f6KPmirojxKA12rnyqOA5BBL4O983OfeGPqjHWSTneU=
