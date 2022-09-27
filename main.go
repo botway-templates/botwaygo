@@ -37,8 +37,16 @@ func GetAppId() string {
 	return data
 }
 
-func GetSigningSecret() string {
-	data := gjson.Get(string(constants.BotwayConfig), "botway.bots."+GetBotInfo("bot.name")+".signing_secret").String()
+func GetSecret() string {
+	value := ""
+
+	if GetBotInfo("bot.type") == "slack" {
+		value = "signing_secret"
+	} else if GetBotInfo("bot.type") == "twitch" {
+		value = "bot_client_secret"
+	}
+
+	data := gjson.Get(string(constants.BotwayConfig), "botway.bots."+GetBotInfo("bot.name")+"."+value).String()
 
 	return data
 }
