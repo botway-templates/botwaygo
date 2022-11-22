@@ -22,9 +22,9 @@ require (
 	github.com/muesli/reflow v0.3.0 // indirect
 	github.com/muesli/termenv v0.13.0 // indirect
 	github.com/pelletier/go-toml v1.9.5 // indirect
-	github.com/pelletier/go-toml/v2 v2.0.5 // indirect
-	github.com/rivo/uniseg v0.4.2 // indirect
-	github.com/spf13/afero v1.9.2 // indirect
+	github.com/pelletier/go-toml/v2 v2.0.6 // indirect
+	github.com/rivo/uniseg v0.4.3 // indirect
+	github.com/spf13/afero v1.9.3 // indirect
 	github.com/spf13/cast v1.5.0 // indirect
 	github.com/spf13/jwalterweatherman v1.1.0 // indirect
 	github.com/spf13/pflag v1.0.5 // indirect
