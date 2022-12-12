@@ -2,7 +2,6 @@
 
 > Golang client package for Botway.
 
-
 ## Installation
 
 ```bash
