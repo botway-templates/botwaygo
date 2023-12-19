@@ -4,7 +4,7 @@ go 1.20
 
 require (
 	github.com/abdfnx/botway v0.2.0
-	github.com/spf13/viper v1.18.0
+	github.com/spf13/viper v1.18.2
 	github.com/tidwall/gjson v1.17.0
 )
 
